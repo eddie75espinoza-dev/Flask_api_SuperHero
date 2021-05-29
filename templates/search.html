@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Heroes{% endblock %}
+{% block body %}
+<div class="search">
+    <form method="POST" action="/">
+        {{ form.csrf_token }}
+        {{ form.name(size=24) }}        
+        <input class="btn_search" id="btn_search" type="submit" value="Go">
+    </form>
+</div>
+<div class="container">
+    <div class="title">
+        <h2 id="name_hero">{{ data.name }}</h2>
+    </div>
+    <div class="row">
+        <div class="img_container">
+            <img src="{{ data.images.lg }}" alt="{{ data.name }}">   
+        </div>            
+        <div class="power_stats">
+            {% for content_list in context %}
+            <div class="stats" id="stats_{{ content_list[0] }}">
+                <p class="stats-text">{{ content_list[0] }}
+                <span class="stats-num" id="{{content_list[0]}}"><br>{{ content_list[1] }}</span></p>
+            </div>
+            {% endfor %}           
+        </div>
+    </div>
+</div>
+    <div class="fats">
+        <div class="fats_card">
+            <p>Universe {{ data.biography.publisher }}</p> 
+        </div>
+        <div class="fats_card">
+            <h3 class="subtitle"><strong>Name ~ </strong>{{ data.biography.fullName }}</h3>
+        </div>
+        <div class="fats_card">
+            <h4>Race: {{ data.appearance.race }}</h4>
+        </div>
+        <div class="fats_card">
+            <p>Height {{ data.appearance.height[0] }} | Weight {{ data.appearance.weight[0] }}</p>
+        </div>
+        <div class="fats_card">
+            <p>Occupation: {{ data.work.occupation }}</p>
+        </div>
+        <div class="fats_card">
+            <p>Universe Zone: {{ data.work.base }}</p>
+        </div>
+        <div class="fats_card">
+            <p>Connections {{ data.connections.groupAffiliation }}</p>
+        </div>
+        <div class="fats_card">
+            <p>Relatives {{ data.connections.relatives }}</p>
+        </div>        
+    </div>
+           
+<div class="go_home">
+    <p><a href="{{ url_for('index') }}">go somewhere nice</a></p>
+</div>
+{% endblock %}

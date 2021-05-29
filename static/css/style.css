@@ -1,0 +1,284 @@
+root{
+    --text-primary: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Comic Neue', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: url('../img/pngegg\ \(4\).png') no-repeat;
+    background-size: 100vw;
+    background-attachment: fixed;
+    background-color: #001427; /*#96CDFF;#A2C7E5;*/
+    fill-opacity: var(--text-primary);
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;/*#ffd700;*/
+}
+::-webkit-scrollbar-thumb {
+    background: #F45D01;
+}
+::selection{
+  background: #adff2f;
+}
+/*  Menu */
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .logo{
+    color:#fefefe;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+#header ul li a{
+   text-decoration: none; 
+   padding: 6px 12px;
+   color: #fefefe;
+   font-size: 1.2em;
+   box-shadow: 4px 4px 2px #fff;
+   transition: 0.6s;
+}
+#header ul li a:hover{
+    background: #fefefe;
+    color: #001427;
+    border-radius: 20px;
+}
+
+/*  Background image Scroll */
+.empty{
+    width: 100%;
+    height: 30px;
+}
+.center_title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.logo_comic{
+    width: 100px;
+    height: 100px;
+}
+.img_scroll{
+    width: 100%;
+    height: 450px;   
+}
+.img_scroll img{
+    transform: translateY(20px);
+}
+/*   Container */
+.search{
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+} 
+.btn_search{
+    width: 80px;
+    background-color: #F45D01;
+}
+.container{
+    padding: 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.title h2{
+    font-size: clamp(3rem, 6vw, 8rem);
+    color: #ffd700; 
+    font-weight: 700;
+    text-shadow: 4px 4px 2px rgba(255,255,255,0.6);   
+}
+.img_container, .stats{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_container img{    
+    image-rendering: optimizeQuality; 
+    border-radius: 0.5rem;
+    box-shadow: 12px 11px 10px -4px rgba(255,255,255,0.7);
+    -webkit-box-shadow: 12px 11px 10px -4px rgba(255,255,255,0.7);
+    -moz-box-shadow: 12px 11px 10px -4px rgba(255,255,255,0.7);   
+}
+.power_stats{ 
+    padding: 1.5rem;
+    display: grid;    
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    background: linear-gradient(to bottom, #fff, transparent);
+}
+.stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats-text, .stats-num{
+    padding: 0.3rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    font-style:italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.power_stats .stats:nth-child(1),
+.power_stats .stats:nth-child(2),
+.power_stats .stats:nth-child(3),
+.power_stats .stats:nth-child(4),
+.power_stats .stats:nth-child(5),
+.power_stats .stats:nth-child(6){
+    width: 20px;
+    height: 20px;
+    padding: 0.8rem;
+    transition: all 8s;
+    border-radius: 50%;
+}
+.fats{
+    padding: 1rem 2rem;
+    display: grid;    
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));   
+}
+.fats_card{
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    background-color:#124e78;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.go_home{
+    padding: 2rem;
+}
+.go_home a{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+/* footer */
+footer{
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+.footer_group{
+    display: flex; 
+    padding: 1rem 1rem;    
+}
+.right_footer, .center_footer, .left_footer{
+    padding: 0 1rem;
+}
+.logo_footer_marvel{
+    height: 30px;
+    width: auto;
+    padding: 0 0.5rem;
+}
+.logo_footer_dc{
+    height: 30px;
+    padding: 0 0.5rem;
+}
+/*   Page not found    */
+
+/* MEDIA */
+@media screen and (max-width: 1080px){
+    body{
+        background: url('../img/pngegg\ \(4\).png') no-repeat;
+        background-size: 100vw;
+        background-attachment: fixed;
+        background-color: #0f2c47;
+    }
+    .power_stats{ 
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+    .img_scroll img{
+        transform: translateY(300px);
+    }
+}
+@media screen and (max-width: 768px){
+    body {
+        background-color: #124e78;
+    }
+    .logo_comic{
+        width: 50px;
+        height: 50px;
+    }
+    .img_scroll{
+        height: 240px;
+    }
+    .power_stats{ 
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .center_footer{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 414px){
+    body {
+        background-color: #22517a;
+    }
+    .logo_comic{
+        width: 44px;
+        height: 44px;
+    }
+    .img_scroll{
+        height: 160px;
+    }
+    .btn_search{
+        width: 52px;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title h2{
+        font-size: 2rem;
+    }
+    .img_container img{
+        width: 70%;
+        height: auto;
+    }
+    .power_stats{
+        padding: 3rem 2rem;
+        display: inline-grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer_group{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}

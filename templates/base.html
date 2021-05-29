@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSuper {% block title %}{% endblock title %}</title>
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" type="image/ico" href= "{{ url_for('.static', filename='img/favicon.ico')}}"/>
+    <!-- Css custom -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/style.css') }}" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <a href="" class="logo">eComic</a>
+        <ul>
+            <li><a class="active" href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>        
+    </header>
+    {% include 'scroll.html' %}
+    {% block body %}{% endblock body %}
+    {% block page_not_found %}{% endblock page_not_found %} 
+    {% include 'footer.html' %} 
+    <script defer src="{{ url_for('.static', filename='js/main.js') }}"></script>
+</body>
+</html>
